@@ -44,9 +44,35 @@ ul {
 .sidebar ul li {
   margin-bottom: 20px;
 }
+
+/* Header styling */
 .header {
   grid-area: header;
   background-color: yellowgreen;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 2rem 4rem;
+}
+
+.header .top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.header .left-side {
+  width: 100%;
+}
+.header .right-side {
+  width: 40%;
+}
+input[type="text"] {
+  width: min(80%, 700px);
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: #e7e5e4;
 }
 
 .main-content {
