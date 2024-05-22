@@ -4,6 +4,9 @@
 body {
   height: 100vh;
 }
+ul {
+  list-style: none;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,6 +16,7 @@ body {
 }
 
 .main-container {
+  height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr 5fr;
@@ -21,14 +25,31 @@ body {
     "sidebar main-content";
 }
 
-.header {
-  grid-area: header;
+/* Sidebar styling */
+.sidebar {
+  background-color: beige;
+  grid-area: sidebar;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 45px;
+  padding: 2rem;
 }
 
-.sidebar {
-  grid-area: sidebar;
+.logo {
+  font-size: 1.4rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+.header {
+  grid-area: header;
+  background-color: yellowgreen;
 }
 
 .main-content {
+  background-color: blueviolet;
   grid-area: main-content;
 }
