@@ -72,21 +72,53 @@ ul {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .header .left-side {
   width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
 }
-.header .right-side {
-  width: 40%;
+
+.header form {
+  width: 100%;
 }
+
 input[type="text"] {
   width: min(80%, 700px);
   font-size: 1.6rem;
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 2rem;
   border-radius: 2rem;
   border: none;
   background-color: #e7e5e4;
+}
+
+.header .left-side img {
+  width: 28px;
+  margin-right: 12px;
+}
+
+.header .right-side {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 28px;
+  object-fit: scale-down;
+  margin-right: 3rem;
+}
+
+.header .user-logo-mini {
+  margin-right: 1.6rem;
+  width: 48px;
+}
+
+.username {
+  text-wrap: nowrap;
 }
 
 .main-content {
