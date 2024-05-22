@@ -29,20 +29,34 @@ ul {
 .sidebar {
   background-color: beige;
   grid-area: sidebar;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   display: grid;
   grid-auto-rows: max-content;
   gap: 45px;
-  padding: 2rem;
+  padding: 1.8rem 2.4rem;
 }
 
 .logo {
+  justify-self: center;
   font-size: 1.4rem;
+  display: flex;
+}
+.logo img {
+  width: 42px;
+  margin-right: 10px;
 }
 
 .sidebar ul li {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+}
+.navigate-section img,
+.settings-section img {
+  width: 24px;
+  margin-right: 20px;
+  /* filter: invert(1); */
 }
 
 /* Header styling */
