@@ -160,7 +160,70 @@ input[type="text"] {
   margin-right: 20px;
 }
 
+/* Main content */
 .main-content {
-  background-color: blueviolet;
+  background-color: rgb(216, 175, 255);
   grid-area: main-content;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  /* grid-template-rows: min-content 1fr; */
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  gap: 2rem;
+  padding: 2.5rem 2rem;
+}
+
+.projects h2 {
+  font-size: 2rem;
+}
+.projects h4 {
+  font-size: 1.8rem;
+}
+
+.projects {
+  grid-area: projects;
+}
+.announcements {
+  grid-area: announcements;
+  width: 300px;
+}
+.trending {
+  grid-area: trending;
+  width: 300px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.cards .card {
+  background-color: rebeccapurple;
+  border-radius: 6px;
+  padding: 2rem 4rem;
+  border-left: 1rem solid green;
+}
+
+.card h4 {
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  color: #78716c;
+  line-height: 2.2rem;
+}
+
+.card .card-icons {
+  gap: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.card .card-icons img {
+  width: 26px;
 }
