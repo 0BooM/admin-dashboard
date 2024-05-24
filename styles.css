@@ -63,11 +63,13 @@ ul {
 
 /* Header styling */
 .header {
+  z-index: 1;
   grid-area: header;
   background-color: #7dd3fc;
   font-size: 1.6rem;
   font-weight: bold;
   padding: 2rem 4rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
 }
 
 .header .top {
@@ -168,34 +170,29 @@ input[type="text"] {
   background-color: #e5e7eb;
   grid-area: main-content;
   display: grid;
-  grid-template-columns: 1fr auto;
-  /* grid-template-rows: min-content 1fr; */
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: min-content 1fr;
   grid-template-areas:
     "projects announcements"
     "projects trending";
   gap: 2rem;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 3.5rem 2.5rem 2rem;
 }
 
-.projects h2 {
+.projects h2,
+.announcements h2,
+.trending h2 {
   font-size: 2rem;
 }
-.projects h4 {
+.projects h4,
+.announcements li .announcements h2,
+.trending h2 {
   font-size: 1.8rem;
 }
 
 .projects {
   grid-area: projects;
 }
-.announcements {
-  grid-area: announcements;
-  width: 300px;
-}
-.trending {
-  grid-area: trending;
-  width: 300px;
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,6 +207,7 @@ input[type="text"] {
   border-left: 1rem solid #075985;
   display: grid;
   grid-template-rows: min-content min-content 1fr;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
 }
 
 .card h4 {
@@ -227,8 +225,73 @@ input[type="text"] {
   display: flex;
   justify-content: flex-end;
   align-self: end;
+  margin-top: 1rem;
 }
 
 .card .card-icons img {
   width: 26px;
+}
+
+.announcements {
+  grid-area: announcements;
+  width: 50ch;
+}
+
+.announcements-info h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.announcements-info,
+.trending-info {
+  display: grid;
+  height: fit-content;
+  margin-top: 10px;
+  border-radius: 6px;
+  padding: 3rem;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+}
+
+.announcements-info p {
+  font-size: 1.2rem;
+  color: #78716c;
+}
+
+.announcements-info li:nth-child(1),
+.announcements-info li:nth-child(2) {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.trending {
+  grid-area: trending;
+  font-size: 1.4rem;
+}
+.trending h2 {
+  font-size: 2rem;
+}
+.trending h4 {
+  font-weight: bold;
+}
+.trending p {
+  color: #78716c;
+}
+
+.trending-info li img {
+  width: 50px;
+  display: flex;
+}
+
+.trending-info li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.trending-user-info {
+  display: flex;
+  flex-direction: column;
 }
